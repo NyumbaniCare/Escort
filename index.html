@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Escort Service</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, nav, main, footer { padding: 1em; }
+    nav { background: #333; color: white; display: flex; justify-content: space-between; }
+    nav a { color: white; margin-right: 1em; text-decoration: none; }
+    .sidenav-toggle { display: none; cursor: pointer; }
+    .sidenav { display: none; background: #222; color: white; position: absolute; top: 0; left: 0; width: 200px; height: 100%; padding: 1em; }
+    .sidenav a { display: block; color: white; margin: 10px 0; }
+    @media (max-width: 600px) {
+      .sidenav-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="sidenav-toggle" onclick="toggleNav()">☰ Menu</span>
+    <div class="sidenav" id="sidenav">
+      <a href="index.html">Home</a>
+      <a href="locations.html">Locations</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <a href="booking.html">Book Now</a>
+    </div>
+  </nav>
+  <main>
+    <h1>Welcome to Our Service</h1>
+    <p>Explore VIP profiles and trusted services in your area.</p>
+    <a href="profiles.html">Browse Profiles</a>
+  </main>
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('sidenav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
+
+<!-- Repeat similar structure for locations.html, profiles.html, profile-detail.html, about.html
